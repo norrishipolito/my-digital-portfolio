@@ -58,7 +58,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 
 const ArticleList = () => {
   return (
-    <Container maxW={'7xl'} h='calc(100vh)' p="12">
+    <Container maxW={'7xl'} h='calc(95vh)' p="12">
       <Heading as="h1">DEPARTMENT/DIVISION ASSIGNMENT</Heading>
       <Box
         marginTop={{ base: '1', sm: '5' }}
@@ -105,45 +105,36 @@ const ArticleList = () => {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-          <BlogTags tags={['Software Engineering', 'Product Delivery']} />
+          <BlogTags tags={['Software Engineering','Automation','Tools', 'Product Delivery']} />
           <Heading marginTop="1">
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              Embedded Test Lab - Tools
+              Embedded Test Laboratory
             </Link>
           </Heading>
           <Text
             as="p"
             marginTop="2"
-            color={useColorModeValue('gray.700', 'gray.200')}
+            color={useColorModeValue('gray.300', 'gray.200')}
             fontSize="lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            We <b>drive</b> and <b>validate</b> the <b>quality</b> of the <b>Firmware and Applications</b> of our printers by assuring that these products <b>meet requirements and delight our customers</b>.
           </Text>
-          <BlogAuthor name="Lexmark ETL" date={new Date('2021-04-06T19:01:27Z')} />
+          <BlogAuthor name="Lexmark ETL" date={new Date('2022-07-20')} />
         </Box>
       </Box>
       
       <Divider marginTop="5" />
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-        <Heading as="h2"></Heading>
-        <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+        <Heading as="h2">What We Do</Heading>
+        <Text as="p" fontSize="lg" color={'gray.300'}>
+          We ensure that embedded firmware and applications are of quality through, Firmware functional testing, Apps functionality and compatibility testing and Integration/Reliability testing.
         </Text>
-        <Text as="p" fontSize="lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
-          pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
-          imperdiet. Mauris quis erat consequat, commodo massa quis, feugiat
-          sapien. Suspendisse placerat vulputate posuere. Curabitur neque
-          tortor, mattis nec lacus non, placerat congue elit.
+        <Text as="p" fontSize="lg" color={'gray.300'}>
+          We support product delivery, by meeting test commitments and delivering quality firmware and applications & 
+          continuosly improve test efficiency through automation, tool creation/usage and process improvements.
         </Text>
+        <Text as="p" fontSize="lg" color={'gray.300'}>
+        </Text>
+        
     
       </VStack>
     </Container>

@@ -22,7 +22,7 @@ export default function CallToActionWithAnnotation() {
         />
       </Head>
 
-      <Container maxW={'3xl'}>
+      <Container maxW={'4xl'}>
         <Stack
           as={Box}
           textAlign={'center'}
@@ -39,10 +39,8 @@ export default function CallToActionWithAnnotation() {
               Research & Development
             </Text>
           </Heading>
-          <Text color={'white'}>
-            Monetize your content by charging your most loyal readers and reward
-            them loyalty points. Give back to your loyal readers by granting
-            them access to your pre-releases and sneak-peaks.
+          <Text color={'gray.200'}>
+            Creating IoT-and-Cloud-Enabled imaging technologies that deliver print simplicity, security, savings & sustainability.
           </Text>
           <Box
               position={'relative'}

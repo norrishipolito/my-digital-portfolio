@@ -49,7 +49,7 @@ import {
                 Norris G. Hipolito Jr.
               </Text>
             </Heading>
-            <Text color={'white'}>
+            <Text color={'gray.200'}>
               Snippy is a rich coding snippets app that lets you create your own
               code snippets, categorize them, and even sync them in the cloud so
               you can use them anywhere. All that is free!Snippy is a rich coding snippets app that lets you create your own
@@ -64,8 +64,8 @@ import {
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
-                colorScheme={'red'}
-                bg={'green.400'}
+                colorScheme={'blue'}
+                bg={'#00c425'}
                 _hover={{ bg: 'green.500' }}>
                 My OJT Journey
               </Button>
@@ -74,7 +74,8 @@ import {
                 size={'lg'}
                 fontWeight={'normal'}
                 px={6}
-                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+                // leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+                >
                 About Me
               </Button>
             </Stack>
@@ -92,7 +93,7 @@ import {
               top={'-20%'}
               left={0}
               zIndex={-1}
-              color={useColorModeValue('red.50', 'red.400')}
+              color={useColorModeValue('blue.100', 'red.400')}
             />
             <Box
               position={'relative'}

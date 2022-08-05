@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, ReactElement } from 'react';
 import {
   Stack,
   Container,
@@ -7,11 +7,15 @@ import {
   Text,
   Heading,
   SimpleGrid,
+  Icon,
 } from '@chakra-ui/react';
+import { FaFlask,FaAward } from 'react-icons/fa';
+import { RiHandHeartLine,RiCommunityFill,RiUserHeartLine } from 'react-icons/ri'
+import { GiFlexibleStar } from 'react-icons/gi'
 
 export default function StatsGridWithImage() {
   return (
-    <Box bg={'#406882'} position={'relative'}>
+    <Box position={'relative'}>
       <Flex
         flex={1}
         zIndex={0}
@@ -25,7 +29,7 @@ export default function StatsGridWithImage() {
         insetY={0}
         right={0}>
         <Flex
-          bgGradient={'linear(to-r, #406882 10%, transparent)'}
+          // bgGradient={'linear(to-r, #406882 10%, transparent)'}
           w={'full'}
           h={'full'}
         />
@@ -37,46 +41,36 @@ export default function StatsGridWithImage() {
             color={'gray.400'}
             justify={{ lg: 'center' }}
             py={{ base: 4, md: 20, xl: 60 }}>
-            <Box mb={{ base: 8, md: 20 }}>
+            <Box mb={{ base: 8, md: 5 }}>
               <Text
                 fontFamily={'heading'}
                 fontWeight={700}
                 textTransform={'uppercase'}
                 mb={3}
                 fontSize={'xl'}
-                color={'gray.500'}>
-                Technology
+                color={'#1a374d'}>
+                About Lexmark
               </Text>
               <Heading
                 color={'white'}
                 mb={5}
                 fontSize={{ base: '3xl', md: '5xl' }}>
-                21st century agriculture
+                Overview
               </Heading>
-              <Text fontSize={'xl'} color={'gray.400'}>
-                The NewLife™ technology allows you to monitor your crops and get
-                complete insights at real time. The proprietary
-                software/hardware ecosystem prevents your plants from getting
-                neglected.
+              <Text fontSize={'xl'} color={'gray.300'}>
+                Lexmark creates smart IoT print devices and cloud-native solutions that help customers worldwide achieve their vision of print simplicity, security, savings and sustainability. Combining innovative technology with deep industry expertise, Lexmark serves customers in retail, financial services, healthcare, manufacturing, education, government and more. A recognized industry leader in print hardware, services and security, Lexmark is also lauded for our global corporate citizenship and commitment to sustainability.
               </Text>
             </Box>
+            <Box mt={{ base: 8, md: 20 }} >
+              <Heading
+                color={'white'}
+                mb={5}
+                fontSize={{ base: '3xl', md: '5xl' }}>
+                Lexmark Values
+              </Heading>
 
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-              {stats.map((stat) => (
-                <Box key={stat.title}>
-                  <Text
-                    fontFamily={'heading'}
-                    fontSize={'3xl'}
-                    color={'white'}
-                    mb={3}>
-                    {stat.title}
-                  </Text>
-                  <Text fontSize={'xl'} color={'gray.400'}>
-                    {stat.content}
-                  </Text>
-                </Box>
-              ))}
-            </SimpleGrid>
+            </Box>
+            <SimpleThreeColumns />
           </Stack>
         </Stack>
       </Container>
@@ -92,39 +86,95 @@ const StatsText = ({ children }: { children: ReactNode }) => (
 
 const stats = [
   {
-    title: '10+',
+    title: '1M+',
     content: (
       <>
-        <StatsText>Software modules</StatsText> for detailed monitoring and
-        real-time analytics
+        <StatsText>Devices</StatsText> Under Contract
       </>
     ),
   },
   {
-    title: '24/7',
+    title: '6,500+',
     content: (
       <>
-        <StatsText>Analytics</StatsText> enabled right in your dashboard without
-        history limitations
-      </>
-    ),
-  },
-  {
-    title: '13%',
-    content: (
-      <>
-        <StatsText>Farms</StatsText> in North America has chosen NewLife™ as
-        their management solution
-      </>
-    ),
-  },
-  {
-    title: '250M+',
-    content: (
-      <>
-        <StatsText>Plants</StatsText> currently connected and monitored by the
-        NewLife™ software
+        Delivered by <StatsText>Partners</StatsText>
       </>
     ),
   },
 ];
+interface FeatureProps {
+  title: string;
+  text: string;
+  icon: ReactElement;
+}
+
+const Feature = ({ title, text, icon }: FeatureProps) => {
+  return (
+    <Stack>
+      <Flex
+        w={16}
+        h={16}
+        align={'center'}
+        justify={'center'}
+        color={'white'}
+        rounded={'full'}
+        bg={'gray.100'}
+        mb={1}>
+        {icon}
+      </Flex>
+      <Text color={'#363640'} fontWeight={600}>{title}</Text>
+      <Text color={'gray.300'}>{text}</Text>
+    </Stack>
+  );
+};
+
+export function SimpleThreeColumns() {
+  return (
+    <Box p={4}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+        <Feature
+          icon={<Icon as={FaFlask} color={'#00c425'} w={10} h={10} />}
+          title={'INNOVATION'}
+          text={
+            'We innovate daily, striving to continuously improve what we do and how we do it.'
+          }
+        />
+        <Feature
+          icon={<Icon as={FaAward} color={'#00c425'} w={10} h={10} />}
+          title={'EXCELLENCE'}
+          text={
+            'We deliver products and  services with exceptional quality.'
+          }
+        />
+        <Feature
+          icon={<Icon as={GiFlexibleStar} color={'#00c425'} w={10} h={10} />}
+          title={'AGILITY'}
+          text={
+            'Our creative, flexible workplace enables us to adapt quickly and move rapidly to address the evolving needs of our customers.'
+          }
+        />
+        <Feature
+          icon={<Icon as={RiUserHeartLine} color={'#00c425'} w={10} h={10} />}
+          title={'INTEGRITY'}
+          text={
+            'We are honest, courageous and transparent in all our interactions, doing what we say and saying what we do.'
+          }
+        />
+        <Feature
+          icon={<Icon as={RiCommunityFill} color={'#00c425'} w={10} h={10} />}
+          title={'COMMUNITY'}
+          text={
+            'We generously support both our Lexmark family and the communities in which we live and work.'
+          }
+        />
+        <Feature
+          icon={<Icon as={RiHandHeartLine} color={'#00c425'} w={10} h={10} />}
+          title={'RESPECT'}
+          text={
+            'Our inclusive culture fosters the value of diverse input and mutual respect.'
+          }
+        />
+      </SimpleGrid>
+    </Box>
+  );
+}
