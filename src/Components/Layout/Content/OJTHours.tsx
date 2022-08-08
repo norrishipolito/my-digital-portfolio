@@ -6,10 +6,11 @@ import {
     Stat,
     StatLabel,
     StatNumber,
+    Text,
     useColorModeValue,
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
-  import { BsPerson } from 'react-icons/bs';
+  import { BsClock } from 'react-icons/bs';
   import { FiServer } from 'react-icons/fi';
   import { GoLocation } from 'react-icons/go';
   
@@ -56,15 +57,20 @@ import {
           fontSize={'4xl'}
           py={10}
           fontWeight={'bold'}>
-          Our company is expanding, you could be too.
+          My time with Lexmark has been quite exceptional
         </chakra.h1>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+        <Flex justifyContent='center' gap ="10">
+          <Box  minW='sm'>
           <StatsCard
-            title={'Users'}
-            stat={'5,000'}
-            icon={<BsPerson size={'3em'} />}
+          title={'Hours'}
+            stat={'320'}
+            icon={<BsClock size={'3em'} />}
           />
-          <StatsCard
+          </Box>
+          <Box maxW='xs'>
+          <Text textAlign='justify'>I estimate that the number of hours that I accumulated is more or equal to <Text fontWeight='bold' display='inline' > 320 hours </Text> including the daily standups, programming, meeting and presentation.</Text>
+          </Box>
+          {/* <StatsCard
             title={'Servers'}
             stat={'1,000'}
             icon={<FiServer size={'3em'} />}
@@ -73,8 +79,8 @@ import {
             title={'Datacenters'}
             stat={'7'}
             icon={<GoLocation size={'3em'} />}
-          />
-        </SimpleGrid>
+          /> */}
+        </Flex>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}
