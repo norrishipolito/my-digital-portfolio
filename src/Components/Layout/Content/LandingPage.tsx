@@ -93,7 +93,7 @@ import {
               top={'-20%'}
               left={0}
               zIndex={-1}
-              color={useColorModeValue('blue.100', 'red.400')}
+              color={useColorModeValue('blue.100', '#6998AB')}
             />
             <Box
               position={'relative'}

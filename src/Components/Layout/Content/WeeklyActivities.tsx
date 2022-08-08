@@ -46,7 +46,7 @@ export default function GridListWithHeading() {
       <Stack spacing={4} as={Container} maxW={'4xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'}>Weekly Activities</Heading>
         <Text color={'white'} fontSize={'xl'}>
-          Just a summary of what I did at Lexmark in a week
+        A rundown of my work experience at Lexmark
         </Text>
       </Stack>
 
