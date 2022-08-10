@@ -10,46 +10,59 @@ import {
   useColorModeValue,
   createIcon,
   Image,
+  SlideFade,
+  useDisclosure
 } from '@chakra-ui/react';
+import React, { useRef } from "react"
+import { useInViewport } from "react-in-viewport"
 let lexmark = require("../../../Images/Lexmark.png")
 export default function CallToActionWithAnnotation() {
+  const ref = useRef(null)
+  const { inViewport } = useInViewport(
+    ref,
+    { rootMargin: "-200px" },
+    { disconnectOnLeave: false },
+    {}
+  )
   return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+    <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
+      <Box
+        ref={ref}>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
 
-      <Container maxW={'4xl'}>
-        <Stack
-          as={Box}
-          textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}>
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-            lineHeight={'110%'}>
-            <Text as={'span'} color={'#363640'}>
-              Lexmark <br/>
+        <Container maxW={'4xl'}>
+          <Stack
+            as={Box}
+            textAlign={'center'}
+            spacing={{ base: 8, md: 14 }}
+            py={{ base: 20, md: 36 }}>
+            <Heading
+              fontWeight={600}
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              lineHeight={'110%'}>
+              <Text as={'span'} color={'#363640'}>
+                Lexmark <br />
+              </Text>
+              <Text as={'span'} color={'#00c425'}>
+                Research & Development
+              </Text>
+            </Heading>
+            <Text color={'gray.200'}>
+              Creating IoT-and-Cloud-Enabled imaging technologies that deliver print simplicity, security, savings & sustainability.
             </Text>
-            <Text as={'span'} color={'#00c425'}>
-              Research & Development
-            </Text>
-          </Heading>
-          <Text color={'gray.200'}>
-            Creating IoT-and-Cloud-Enabled imaging technologies that deliver print simplicity, security, savings & sustainability.
-          </Text>
-          <Box
+            <Box
               position={'relative'}
               height={'200px'}
               rounded={'2xl'}
               boxShadow={'2xl'}
               width={'full'}
               overflow={'hidden'}>
-              
+
               <Image
                 alt={'Hero Image'}
                 fit={'cover'}
@@ -59,9 +72,10 @@ export default function CallToActionWithAnnotation() {
                 src={lexmark}
               />
             </Box>
-        </Stack>
-      </Container>
-    </>
+          </Stack>
+        </Container>
+      </Box>
+    </SlideFade>
   );
 }
 
