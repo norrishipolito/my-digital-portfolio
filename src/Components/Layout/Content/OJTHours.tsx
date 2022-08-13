@@ -74,11 +74,8 @@ export default function BasicStatistics() {
           <Box>
             <Text textAlign='justify'>
               I estimate that the number of hours that I accumulated is more or
-              equal to{' '}
-              <Text fontWeight='bold' display='inline'>
-                {' '}
-                320 Hours
-              </Text>{' '}
+              equal to
+              <b>  320 Hours </b>
               including the daily standups, programming, meeting and
               presentation.
             </Text>

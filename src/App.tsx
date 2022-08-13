@@ -18,7 +18,8 @@ function App() {
       <ChakraProvider>
         <NavBar />
         <Box bgGradient={'linear(to-tr, #406882 60%, transparent)'} pb={'5rem'}>
-          <LandingPage />
+          {/* <AppRoutes/> */}
+          <LandingPage/>
           <Company/>
           <CompanyProfile/>
           <DepartmentAssignment/>

@@ -41,7 +41,7 @@ import {
   }) => {
     return (
       <chakra.button
-        bg={useColorModeValue('#6998AB', 'whiteAlpha.100')}
+        bg={useColorModeValue('#B1D0E0', '#B1D0E0')}
         rounded={'full'}
         w={8}
         h={8}
@@ -53,7 +53,7 @@ import {
         justifyContent={'center'}
         transition={'background 0.3s ease'}
         _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          bg: useColorModeValue('#B1D0E0', 'whiteAlpha.500'),
         }}>
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
