@@ -8,26 +8,25 @@ import {
     SimpleGrid,
     useColorModeValue,
   } from '@chakra-ui/react';
+  let MyImage = require('../../../Images/me.JPG');
   
   const testimonials = [
     {
-      name: 'Brandon P.',
-      role: 'Chief Marketing Officer',
+      name: 'Norris H.',
+      role: 'Intern',
       content:
-        'It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!',
-      avatar:
-        'https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+        "I can see what I'm capable of with the proper guidance and supervision in which from being so unfamiliar with asp.net to a level where I was able to swiftly learn and adapt to it. Also, I can see that I progressed and started to improve in my career while working with the right people and the right company in addition to my personal growth. I have indeed acquired many valuable experiences during my time at Lexmark, which will be essential as I continue to advance in my career.",
+      avatar: MyImage,
     },
     {
-      name: 'Krysta B.',
-      role: 'Entrepreneur',
+      name: 'Norris H.',
+      role: 'Intern',
       content:
-        "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
-      avatar:
-        'https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80',
+        "Few people get the chance to have an internship at Lexmark, and I will always be grateful to the company for granting me that opportunity. So, if the chance arises for you to work for Lexmark, seize it right away because I would unquestionably recommend Lexmark as the company where you want to work because it provides a lot of opportunities, values its employees highly, and places an importance on work-life balance.",
+      avatar: MyImage,
     }
   ];
-  
+ 
   const backgrounds = [
     `url("data:image/svg+xml, %3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'560\' height=\'185\' viewBox=\'0 0 560 185\' fill=\'none\'%3E%3Cellipse cx=\'102.633\' cy=\'61.0737\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23ED64A6\' /%3E%3Cellipse cx=\'399.573\' cy=\'123.926\' rx=\'102.633\' ry=\'61.0737\' fill=\'%23F56565\' /%3E%3Cellipse cx=\'366.192\' cy=\'73.2292\' rx=\'193.808\' ry=\'73.2292\' fill=\'%2338B2AC\' /%3E%3Cellipse cx=\'222.705\' cy=\'110.585\' rx=\'193.808\' ry=\'73.2292\' fill=\'%23ED8936\' /%3E%3C/svg%3E")`,
     `url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='185' viewBox='0 0 560 185' fill='none'%3E%3Cellipse cx='457.367' cy='123.926' rx='102.633' ry='61.0737' transform='rotate(-180 457.367 123.926)' fill='%23ED8936'/%3E%3Cellipse cx='160.427' cy='61.0737' rx='102.633' ry='61.0737' transform='rotate(-180 160.427 61.0737)' fill='%2348BB78'/%3E%3Cellipse cx='193.808' cy='111.771' rx='193.808' ry='73.2292' transform='rotate(-180 193.808 111.771)' fill='%230BC5EA'/%3E%3Cellipse cx='337.295' cy='74.415' rx='193.808' ry='73.2292' transform='rotate(-180 337.295 74.415)' fill='%23ED64A6'/%3E%3C/svg%3E")`,
@@ -82,16 +81,18 @@ import {
           backgroundImage: backgrounds[index % 4],
         }}>
         <Flex
+          mt='5'
           direction={'column'}
           textAlign={'left'}
           justifyContent={'space-between'}>
           <chakra.p
             fontSize={'15px'}
             pb={4}
-            color={'gray.600'}>
+            color={'gray.600'}
+            textAlign='justify'>
             {content}
           </chakra.p>
-          <chakra.p fontWeight={'bold'} fontSize={14}>
+          {/* <chakra.p fontWeight={'bold'} fontSize={14}>
             {name}
             <chakra.span
               fontWeight={'medium'}
@@ -99,7 +100,7 @@ import {
               {' '}
               - {role}
             </chakra.span>
-          </chakra.p>
+          </chakra.p> */}
         </Flex>
         <Avatar
           src={avatar}
@@ -132,18 +133,17 @@ import {
             fontSize={48}
             fontWeight={'bold'}
             >
-            You're in good company
+            Lexmark, Where I Find Opportunities and Grow
           </chakra.h1>
           <chakra.h2
             margin={'auto'}
             width={'70%'}
             fontWeight={'medium'}
             color={useColorModeValue('gray.200', 'gray.400')}>
-            See why over{' '}
-            <chakra.strong color={useColorModeValue('gray.100', 'gray.50')}>
-              150,000+
-            </chakra.strong>{' '}
-            influencers use EEZY to manage their social media content!
+            From my time in Lexmark, the following summarizes my overall
+            <chakra.strong color={useColorModeValue('gray.100', 'gray.50')}>{' '}
+             comments, suggestions and recommendations
+             </chakra.strong>
           </chakra.h2>
         </Box>
         <SimpleGrid
@@ -152,7 +152,7 @@ import {
           mt={16}
           mx={'auto'}>
           {testimonials.map((cardInfo, index) => (
-            <TestimonialCard {...cardInfo} index={index} />
+            <TestimonialCard {...cardInfo} index={index} key={index}/>
           ))}
         </SimpleGrid>
         <Box>

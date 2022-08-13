@@ -21,7 +21,7 @@ const features =  [
     {
       id: 2,
       title: '2nd Week',
-      text: 'I was given my first tasked which is to research about what is Software Engineering, SCRUM, Agile and tools to use for the project. Also, I created a database design specifically for the data that we need to fetch and I started coding for the project using ASP.NET MVC framework while studying the ADO.NET framework.',
+      text: 'I was given my first task which is to research about what is Software Engineering, SCRUM, Agile and tools to use for the project. Also, I created a database design specifically for the data that we need to fetch and I started coding for the project using ASP.NET MVC framework while studying the ADO.NET framework.',
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ const features =  [
       text: 'The week started with weekly check-up with my mentor which is all about what I made and challenges I faced during making the implemented application. Then, the Scan Results from penetration testing was introduced and I had to make the database design of the results and start implementing the task which is parsing the text file and saving it to the database.',
     },
     {
-      id: 5,
+      id: 6,
       title: '6th Week',
       text: 'I finished the parsing and saving the text file for the regular scan which is requested by the stakeholder, then I had my demo of what I made. We had our department meeting and for the rest of the week, I continued working with the other scan results.',
     }
@@ -64,7 +64,7 @@ export default function GridListWithHeading() {
               </Box>
               <VStack align={'start'}>
                 <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={'gray.300'}>{feature.text}</Text>
+                <Text color={'gray.300'}>{feature.text} </Text>
               </VStack>
             </HStack>
           ))}

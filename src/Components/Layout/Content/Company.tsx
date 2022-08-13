@@ -27,6 +27,7 @@ export default function CallToActionWithAnnotation() {
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
       <Box
+        id ={'Company'}
         ref={ref}>
         <Head>
           <link
