@@ -85,9 +85,11 @@ export default function CallToActionWithVideo() {
               size={'lg'}
               fontWeight={'normal'}
               px={6}
-              // leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+            // leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
             >
-              About Me
+              <Link to='aboutme' spy={true} smooth={true}>
+                About Me
+              </Link>
             </Button>
           </Stack>
         </Stack>

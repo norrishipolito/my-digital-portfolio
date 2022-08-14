@@ -8,6 +8,8 @@ import {
   Container,
   Avatar,
   useColorModeValue,
+  VStack,
+  Divider,
 } from '@chakra-ui/react';
 let asp = require('../../../Images/asp-logo.png')
 let mssql = require('../../../Images/mssql-logo.png')
@@ -91,7 +93,7 @@ const TestimonialAvatar = ({
 export default function WithSpeechBubbles() {
   return (
     <Box>
-      <Container maxW={'7xl'} py={16} as={Stack} spacing={12}>
+      <Container maxW={'7xl'} py={16} mb={'10rem'} as={Stack} spacing={12}>
         <Stack spacing={0} align={'center'}>
           <Heading>What I Learned</Heading>
           <Text>We have been working with clients around the world</Text>
@@ -152,6 +154,12 @@ export default function WithSpeechBubbles() {
             />
           </Testimonial>
         </Stack>
+        <Divider marginTop="5" />
+        <VStack spacing="2" alignItems="flex-start">
+          <Text as="p" fontSize="lg" color={'gray.300'}>
+            I have also expanded my knowledge about relational databases with the guidance of my mentor. All the task that was assigned to me was a great experience especially parsing text and XML files since it enhances my logic. Furthermore, all the standup meetings, demos and communication with my mentor, colleagues, and the stakeholder, really improves my intrapersonal skills.
+          </Text>
+        </VStack>
       </Container>
     </Box>
   );

@@ -8,7 +8,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaFacebook, FaTwitter, FaGoogle,FaLinkedin,FaGithub } from 'react-icons/fa';
   import { ReactNode } from 'react';
   
   const Logo = (props: any) => {
@@ -52,6 +52,7 @@ import {
         alignItems={'center'}
         justifyContent={'center'}
         transition={'background 0.3s ease'}
+        target='_blank'
         _hover={{
           bg: useColorModeValue('#B1D0E0', 'whiteAlpha.500'),
         }}>
@@ -77,14 +78,20 @@ import {
           <Logo />
           <Text>© 2022 Norris G. Hipolito Jr. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
+            <SocialButton label={'Twitter'} href={'https://twitter.com/Norrizasd'}>
               <FaTwitter color={'#1A374D'} />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube color={'#1A374D'} />
+            <SocialButton label={'Linkein'} href={'https://www.linkedin.com/in/norris-hipolito-jr-a67574209/'}>
+              <FaLinkedin color={'#1A374D'} />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram color={'#1A374D'} />
+            <SocialButton label={'Github'} href={'https://github.com/norrisasd'}>
+              <FaGithub color={'#1A374D'} />
+            </SocialButton>
+            <SocialButton label={'Facebook'} href={'https://www.facebook.com/norrisasd/'}>
+              <FaFacebook color={'#1A374D'} />
+            </SocialButton>
+            <SocialButton label={'Gmail'} href={'https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwPxTzmzcTtwFKnngvhtdDLkgJQcFfQFxncQlmbPFJvrkSGMHjmSzlZdWRbhRDStqkjTWQh'}>
+              <FaGoogle color={'#1A374D'} />
             </SocialButton>
           </Stack>
         </Container>

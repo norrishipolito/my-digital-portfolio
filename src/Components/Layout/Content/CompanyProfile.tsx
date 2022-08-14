@@ -1,4 +1,4 @@
-import { ReactNode, ReactElement } from 'react';
+import { ReactNode, ReactElement, useRef } from 'react';
 import {
   Stack,
   Container,
@@ -8,73 +8,82 @@ import {
   Heading,
   SimpleGrid,
   Icon,
+  SlideFade,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { FaFlask,FaAward } from 'react-icons/fa';
-import { RiHandHeartLine,RiCommunityFill,RiUserHeartLine } from 'react-icons/ri'
+import { FaFlask, FaAward } from 'react-icons/fa';
+import { RiHandHeartLine, RiCommunityFill, RiUserHeartLine } from 'react-icons/ri'
 import { GiFlexibleStar } from 'react-icons/gi'
+import { useInViewport } from 'react-in-viewport';
 
 export default function StatsGridWithImage() {
+  const ref = useRef(null)
+  const { inViewport } = useInViewport(
+    ref,
+    { rootMargin: "-200px" },
+    { disconnectOnLeave: false },
+    {}
+  )
   return (
-    <Box position={'relative'}>
-      <Flex
-        flex={1}
-        zIndex={0}
-        display={{ base: 'none', lg: 'flex' }}
-        backgroundImage="url('/templates/stats-grid-with-image.png')"
-        backgroundSize={'cover'}
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        position={'absolute'}
-        width={'50%'}
-        insetY={0}
-        right={0}>
+    <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
+      <Box position={'relative'} ref={ref}>
         <Flex
-          // bgGradient={'linear(to-r, #406882 10%, transparent)'}
-          w={'full'}
-          h={'full'}
-        />
-      </Flex>
-      <Container maxW={'7xl'} zIndex={10} position={'relative'}>
-        <Stack direction={{ base: 'column', lg: 'row' }}>
-          <Stack
-            flex={1}
-            color={'gray.400'}
-            justify={{ lg: 'center' }}
-            py={{ base: 4, md: 20, xl: 60 }}>
-            <Box mb={{ base: 8, md: 5 }}>
-              <Text
-                fontFamily={'heading'}
-                fontWeight={700}
-                textTransform={'uppercase'}
-                mb={3}
-                fontSize={'xl'}
-                color={'#1a374d'}>
-                About Lexmark
-              </Text>
-              <Heading
-                color={'white'}
-                mb={5}
-                fontSize={{ base: '3xl', md: '5xl' }}>
-                Overview
-              </Heading>
-              <Text fontSize={'xl'} color={'gray.300'}>
-                Lexmark creates smart IoT print devices and cloud-native solutions that help customers worldwide achieve their vision of print simplicity, security, savings and sustainability. Combining innovative technology with deep industry expertise, Lexmark serves customers in retail, financial services, healthcare, manufacturing, education, government and more. A recognized industry leader in print hardware, services and security, Lexmark is also lauded for our global corporate citizenship and commitment to sustainability.
-              </Text>
-            </Box>
-            <Box mt={{ base: 8, md: 20 }} >
-              <Heading
-                color={'white'}
-                mb={5}
-                fontSize={{ base: '3xl', md: '5xl' }}>
-                Lexmark Values
-              </Heading>
+          flex={1}
+          zIndex={0}
+          display={{ base: 'none', lg: 'flex' }}
+          backgroundImage="url('/templates/stats-grid-with-image.png')"
+          backgroundSize={'cover'}
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          position={'absolute'}
+          width={'50%'}
+          insetY={0}
+          right={0}>
+          <Flex
+            // bgGradient={'linear(to-r, #406882 10%, transparent)'}
+            w={'full'}
+            h={'full'}
+          />
+        </Flex>
+        <Container maxW={'7xl'} zIndex={10} position={'relative'} id='companyprofile'>
+          <Stack direction={{ base: 'column', lg: 'row' }}>
+            <Stack
+              flex={1}
+              justify={{ lg: 'center' }}
+              py={{ base: 4, md: 20, xl: 60 }}>
+              <Box mb={{ base: 8, md: 5 }}>
+                <Text
+                  fontFamily={'heading'}
+                  fontWeight={700}
+                  textTransform={'uppercase'}
+                  mb={3}
+                  fontSize={'xl'}
+                  color={'#1a374d'}>
+                  About Lexmark
+                </Text>
+                <Heading
+                  mb={5}
+                  fontSize={{ base: '3xl', md: '5xl' }}>
+                  Overview
+                </Heading>
+                <Text fontSize={'xl'} color={'gray.300'}>
+                  Lexmark creates smart IoT print devices and cloud-native solutions that help customers worldwide achieve their vision of print simplicity, security, savings and sustainability. Combining innovative technology with deep industry expertise, Lexmark serves customers in retail, financial services, healthcare, manufacturing, education, government and more. A recognized industry leader in print hardware, services and security, Lexmark is also lauded for our global corporate citizenship and commitment to sustainability.
+                </Text>
+              </Box>
+              <Box mt={{ base: 8, md: 20 }} >
+                <Heading
+                  mb={5}
+                  fontSize={{ base: '3xl', md: '5xl' }}>
+                  Lexmark Values
+                </Heading>
 
-            </Box>
-            <SimpleThreeColumns />
+              </Box>
+              <SimpleThreeColumns />
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </SlideFade>
   );
 }
 
