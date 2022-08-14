@@ -25,8 +25,8 @@ export default function StatsGridWithImage() {
   )
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
-      <Box position={'relative'} ref={ref} id='companyprofile'>
-        <Flex
+      <Box ref={ref} >
+        {/* <Flex
           flex={1}
           zIndex={0}
           display={{ base: 'none', lg: 'flex' }}
@@ -43,13 +43,15 @@ export default function StatsGridWithImage() {
             w={'full'}
             h={'full'}
           />
-        </Flex>
-        <Container maxW={'7xl'} zIndex={10} position={'relative'}>
+        </Flex> */}
+        <Container maxW={'7xl'} zIndex={10} position={'relative'} id='companyprofile' h='calc(100vh)' centerContent justifyContent={'center'}>
           <Stack direction={{ base: 'column', lg: 'row' }}>
             <Stack
               flex={1}
               justify={{ lg: 'center' }}
-              py={{ base: 4, md: 20, xl: 60 }}>
+              // py={{ base: 4, md: 20, xl: 60 }}>
+              pt={24}
+              >
               <Box mb={{ base: 8, md: 5 }}>
                 <Text
                   fontFamily={'heading'}

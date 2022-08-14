@@ -116,13 +116,12 @@ import {
   export default function GridBlurredBackdrop() {
     return (
       <Flex mt={5}
-      id='comments'
+      h='calc(100vh)' justifyContent={'center'} id='comments'
         textAlign={'center'}
         pt={10}
-        justifyContent={'center'}
         direction={'column'}
         width={'full'}>
-        <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+        <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} mx={'auto'}>
           <chakra.h3
             fontWeight={'bold'}
             fontSize={20}
@@ -156,11 +155,6 @@ import {
             <TestimonialCard {...cardInfo} index={index} key={index}/>
           ))}
         </SimpleGrid>
-        <Box>
-          
-        </Box>
-        <br/>
-        <br/>
       </Flex>
     );
   }
