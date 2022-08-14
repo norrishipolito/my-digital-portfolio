@@ -20,7 +20,7 @@ export default function CallToActionWithVideo() {
   // let navigate = useNavigate();
 
   return (
-    <Container maxW={'7xl'} h='calc(100vh)' pt={'7rem'} centerContent>
+    <Container id='landing' maxW={'7xl'} h='calc(100vh)' centerContent justifyContent={'center'}>
       <Stack
         align={'center'}
         spacing={{ base: 20, md: 10 }}

@@ -2,6 +2,7 @@ import {
   Box,
   Container,
   Heading,
+  Flex,
   SimpleGrid,
   Icon,
   Text,
@@ -58,30 +59,32 @@ export default function GridListWithHeading() {
   )
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
-    <Box p={4} mb={'10rem'} ref={ref} id="weekly">
-      <Stack spacing={4} as={Container} maxW={'4xl'} textAlign={'center'}>
-        <Heading fontSize={'3xl'}>Weekly Activities</Heading>
-        <Text color={'white'} fontSize={'xl'}>
-          A rundown of my work experience at Lexmark
-        </Text>
-      </Stack>
+      <Box px={4} pt={24} mb={'12'} ref={ref} id="weekly" h='calc(100vh)'>
+        <Flex direction='column' h='calc(100vh)' justifyContent={'center'}>
+          <Stack spacing={4} as={Container} maxW={'4xl'} textAlign={'center'}>
+            <Heading fontSize={'3xl'}>Weekly Activities</Heading>
+            <Text color={'white'} fontSize={'xl'}>
+              A rundown of my work experience at Lexmark
+            </Text>
+          </Stack>
 
-      <Container maxW={'6xl'} mt={10}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-          {features.map((feature) => (
-            <HStack key={feature.id} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={CheckIcon} />
-              </Box>
-              <VStack align={'start'}>
-                <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={'gray.300'}>{feature.text} </Text>
-              </VStack>
-            </HStack>
-          ))}
-        </SimpleGrid>
-      </Container>
-    </Box>
+          <Container maxW={'6xl'} mt={10} >
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+              {features.map((feature) => (
+                <HStack key={feature.id} align={'top'}>
+                  <Box color={'green.400'} px={2}>
+                    <Icon as={CheckIcon} />
+                  </Box>
+                  <VStack align={'start'}>
+                    <Text fontWeight={600}>{feature.title}</Text>
+                    <Text color={'gray.300'}>{feature.text} </Text>
+                  </VStack>
+                </HStack>
+              ))}
+            </SimpleGrid>
+          </Container>
+        </Flex>
+      </Box>
     </SlideFade>
   );
 }

@@ -51,8 +51,8 @@ function StatsCard(props: StatsCardProps) {
 
 export default function BasicStatistics() {
   return (
-    <>
-      <Box id='hours'>
+    <Flex id='hours'  h='calc(100vh)' alignItems={'center'}>
+      <Box maxW='7xl' mx={'auto'} px={{ base: '2rem', sm: '3rem', md: '5rem', lg: '11.4rem' }}>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}
@@ -61,8 +61,6 @@ export default function BasicStatistics() {
         >
           My time with Lexmark has been quite exceptional
         </chakra.h1>
-      </Box>
-      <Box maxW='7xl' mx={'auto'} pt={5} px={{ base: '2rem', sm:'3rem', md: '5rem', lg:'11.4rem' }}>
         <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 5, lg: 8 }}>
           <Box>
             <StatsCard
@@ -81,15 +79,7 @@ export default function BasicStatistics() {
             </Text>
           </Box>
         </SimpleGrid>
-        <chakra.h1
-          textAlign={'center'}
-          fontSize={'4xl'}
-          pt={'10rem'}
-          fontWeight={'bold'}
-        >
-          Documentations
-        </chakra.h1>
       </Box>
-    </>
+    </Flex>
   );
 }

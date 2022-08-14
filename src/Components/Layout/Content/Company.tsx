@@ -23,7 +23,9 @@ export default function CallToActionWithAnnotation() {
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
       <Box
         id ={'Company'}
-        ref={ref}>
+        ref={ref} 
+        h='calc(100vh)'>
+         
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
@@ -31,7 +33,7 @@ export default function CallToActionWithAnnotation() {
           />
         </Head>
 
-        <Container maxW={'4xl'}>
+        <Container maxW={'4xl'} h='calc(100vh)' centerContent justifyContent={'center'}>
           <Stack
             as={Box}
             textAlign={'center'}

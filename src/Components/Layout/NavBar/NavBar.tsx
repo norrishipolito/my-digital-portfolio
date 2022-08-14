@@ -52,12 +52,14 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Text
+          <Lenk to={'landing'} spy={true} smooth={true}>
+            <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('#B1D0E0', 'white')}>
             NORRIS G. HIPOLITO JR.
           </Text>
+          </Lenk>
           <Spacer />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10} mr={10}>
             <DesktopNav />
@@ -265,7 +267,7 @@ const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'Comments, Suggestions, and Recommendations',
-        subLabel: 'Rundown of My Work Experience',
+        subLabel: 'My Overall Impression and Review of Lexmark',
         href: 'comments',
       },
       {
