@@ -283,7 +283,7 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'About Me',
+    label: 'Contact Me',
     href: 'aboutme',
   },
 ];

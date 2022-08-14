@@ -105,8 +105,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>ASP.NET MVC</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                One of the things I learned in my experience at lexmark is ASP.NET MVC which is a web application framework for web development.z
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -118,8 +117,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>ADO.NET</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                ADO.NET is a data access technology for relational and non relational systems. Using ADO.NET Entity framework made my experience in accessing database easier.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -129,10 +127,9 @@ export default function WithSpeechBubbles() {
           </Testimonial>
           <Testimonial>
             <TestimonialContent>
-              <TestimonialHeading>Microsoft SQL Server</TestimonialHeading>
+              <TestimonialHeading>Microsoft SQL</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                Learning Microsoft SQL queries and keywords are one of the things I needed to explore to enhance my knowledge about the project.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar
@@ -144,8 +141,7 @@ export default function WithSpeechBubbles() {
             <TestimonialContent>
               <TestimonialHeading>QUARTZ.NET</TestimonialHeading>
               <TestimonialText>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
-                neque sed imperdiet nibh lectus feugiat nunc sem.
+                Job Scheduling is one things needed to be integrated in our project, so learning QUARTZ.NET really helps my understanding in cron scheduling and etc.
               </TestimonialText>
             </TestimonialContent>
             <TestimonialAvatar

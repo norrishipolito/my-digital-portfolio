@@ -18,10 +18,13 @@ import {
     useClipboard,
     useColorModeValue,
     VStack,
+    List,
+    ListItem,
+    ListIcon,
 } from '@chakra-ui/react';
 import React from 'react';
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
-import { MdEmail, MdOutlineEmail } from 'react-icons/md';
+import { MdCheckCircle, MdEmail, MdPhone } from 'react-icons/md';
 let me = require("../../../Images/me.JPG")
 const confetti = {
     light: {
@@ -61,7 +64,7 @@ export default function ContactFormWithSocialButtons() {
                                 base: '4xl',
                                 md: '5xl',
                             }}>
-                            About Me
+                            Contact Me
                         </Heading>
 
                         <Stack
@@ -145,14 +148,30 @@ export default function ContactFormWithSocialButtons() {
                                     align={'center'}
                                     direction={'column'}>
                                     <Text
+                                        color ='white'
                                         fontSize={{ base: 'xl', md: '2xl' }}
-                                        textAlign={'center'}
+                                        textAlign={'justify'}
                                         maxW={'3xl'}>
-                                        We had an incredible experience working with Chakra Templates and were
-                                        impressed they made such a big difference in only three weeks. Our team
-                                        is so grateful for the wonderful improvements they made and their
-                                        ability to get familiar with the product concept so quickly.
+                                        If you have any inquiries, feel free to contact me using this following information:
                                     </Text>
+                                    <List spacing={3} color='white'>
+                                        <ListItem>
+                                            <ListIcon as={MdEmail} color='green.500' />
+                                            norrishipolito@gmail.com
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={MdEmail} color='green.500' />
+                                            norris.hipolitojr@cit.edu
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={MdEmail} color='green.500' />
+                                            norris.hipolitojr@lexmark.com
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListIcon as={MdPhone} color='green.500' />
+                                            +63951579100
+                                        </ListItem>
+                                    </List>
                                     <Box textAlign={'center'}>
                                         <Avatar
                                             src={
@@ -163,7 +182,7 @@ export default function ContactFormWithSocialButtons() {
 
                                         <Text fontWeight={600}>Norris G. Hipolito Jr.</Text>
                                         <Text fontSize={'sm'} color={useColorModeValue('gray.400', 'gray.400')}>
-                                            Student
+                                            BSCS Student
                                         </Text>
                                     </Box>
                                 </Stack>
