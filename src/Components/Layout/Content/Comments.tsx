@@ -116,6 +116,7 @@ import {
   export default function GridBlurredBackdrop() {
     return (
       <Flex mt={5}
+      id='comments'
         textAlign={'center'}
         pt={10}
         justifyContent={'center'}

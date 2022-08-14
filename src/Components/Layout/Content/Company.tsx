@@ -40,7 +40,7 @@ export default function CallToActionWithAnnotation() {
             <Heading
               fontWeight={600}
               fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-              lineHeight={'110%'}>
+              >
               <Text as={'span'}>
                 Lexmark <br />
               </Text>

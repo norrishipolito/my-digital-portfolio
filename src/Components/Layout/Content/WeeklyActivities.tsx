@@ -58,7 +58,7 @@ export default function GridListWithHeading() {
   )
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
-    <Box p={4} mb={'10rem'} ref={ref}>
+    <Box p={4} mb={'10rem'} ref={ref} id="weekly">
       <Stack spacing={4} as={Container} maxW={'4xl'} textAlign={'center'}>
         <Heading fontSize={'3xl'}>Weekly Activities</Heading>
         <Text color={'white'} fontSize={'xl'}>

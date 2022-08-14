@@ -9,7 +9,6 @@ import {
   SimpleGrid,
   Icon,
   SlideFade,
-  useDisclosure,
 } from '@chakra-ui/react';
 import { FaFlask, FaAward } from 'react-icons/fa';
 import { RiHandHeartLine, RiCommunityFill, RiUserHeartLine } from 'react-icons/ri'
@@ -26,7 +25,7 @@ export default function StatsGridWithImage() {
   )
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
-      <Box position={'relative'} ref={ref}>
+      <Box position={'relative'} ref={ref} id='companyprofile'>
         <Flex
           flex={1}
           zIndex={0}
@@ -45,7 +44,7 @@ export default function StatsGridWithImage() {
             h={'full'}
           />
         </Flex>
-        <Container maxW={'7xl'} zIndex={10} position={'relative'} id='companyprofile'>
+        <Container maxW={'7xl'} zIndex={10} position={'relative'}>
           <Stack direction={{ base: 'column', lg: 'row' }}>
             <Stack
               flex={1}

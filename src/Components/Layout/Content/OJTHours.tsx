@@ -52,7 +52,7 @@ function StatsCard(props: StatsCardProps) {
 export default function BasicStatistics() {
   return (
     <>
-      <Box>
+      <Box id='hours'>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}

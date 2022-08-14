@@ -245,33 +245,33 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Activities',
-    href: 'qwe',
+    href: 'weekly',
     children: [
       {
         label: 'Weekly Activities',
         subLabel: 'Rundown of My Work Experience',
-        href: '#',
+        href: 'weekly',
       },
       {
         label: 'Learnings',
         subLabel: 'Technologies I Have Been Working on',
-        href: '#',
+        href: 'learnings',
       },
     ],
   },
   {
     label: 'Documentations',
-    href: 'qwea',
+    href: 'comments',
     children: [
       {
         label: 'Comments, Suggestions, and Recommendations',
         subLabel: 'Rundown of My Work Experience',
-        href: '#',
+        href: 'comments',
       },
       {
         label: 'Ojt Hours',
         subLabel: 'Estimated Number of Hours in My Ojt Journey',
-        href: '#',
+        href: 'hours',
       },
       {
         label: 'Appendix',
