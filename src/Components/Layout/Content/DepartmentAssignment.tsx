@@ -71,7 +71,7 @@ const ArticleList = () => {
   )
   return (
     <SlideFade delay={0.3} in={inViewport} offsetY='20px'>
-      <Container id="department" ref={ref} maxW={'7xl'} mb={'12'} px="12" pt="24" pb="12"   h='calc(100vh)' centerContent justifyContent={'center'}>
+      <Container id="department" ref={ref} maxW={'7xl'} mb={'12'} px="12" pt="24" pb="12" h='calc(100vh)' centerContent justifyContent={'center'}>
         <Box>
         <Heading as="h1">DEPARTMENT/DIVISION ASSIGNMENT</Heading>
         </Box>

@@ -9,6 +9,7 @@ import Company from './Components/Layout/Content/Company';
 import CompanyProfile from './Components/Layout/Content/CompanyProfile';
 import Experience from './Components/Layout/Content/Experience';
 import Comments from './Components/Layout/Content/Comments';
+import Feedback from './Components/Layout/Content/Feedback';
 import OJTHours from './Components/Layout/Content/OJTHours';
 import Appendix from './Components/Layout/Content/Appendix';
 import React, { useRef } from "react"
@@ -28,6 +29,7 @@ function App() {
           <WeeklyActivities />
           <Experience />
           <Comments />
+          <Feedback/>
           <OJTHours />
           <Appendix />
           <About/>

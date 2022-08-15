@@ -271,6 +271,11 @@ const NAV_ITEMS: Array<NavItem> = [
         href: 'comments',
       },
       {
+        label: 'Mentor Feedback',
+        subLabel: "Their Overall Evaluation During My Internship",
+        href: 'feedback',
+      },
+      {
         label: 'Ojt Hours',
         subLabel: 'Estimated Number of Hours in My Ojt Journey',
         href: 'hours',
