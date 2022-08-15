@@ -8,22 +8,23 @@ import {
     SimpleGrid,
     useColorModeValue,
 } from '@chakra-ui/react';
-let MyImage = require('../../../Images/me.JPG');
+let Mentor = require('../../../Images/Mentor.jfif');
+let NoProf = require('../../../Images/NoProf.jfif');
 
 const testimonials = [
     {
-        name: 'Catherine Puracan',
+        name: 'Catherine Calipay',
         role: 'Mentor',
         content:
-            "Di ko kasabot ni Norris kay di kamao mo storya ahaha.",
-        avatar: MyImage,
+            "Norris understands the requirement and able to deliver ahead of time and beyond what is expected. He is not hesitant to ask questions. He is very resourceful in finding ways to solve his problems and he is very eager to learn. Keep up the good work.",
+        avatar: Mentor,
     },
     {
-        name: 'Jacquelyn Sejismundo',
-        role: 'Stakeholder',
+        name: 'Phoebe Mahinay & Catherine Calipay',
+        role: 'Product Owner & Mentor',
         content:
-            'Di kamao mo explain maong ekis pero gwapo mn siya so ok na lang.',
-        avatar: MyImage,
+            'Norris is diligent in completing the tasks assigned to him, sometimes even completing them ahead of schedule. He does not hesitate to ask questions. He also has a good working relationship with the team. Keep up the good work!',
+        avatar: NoProf,
     },
 ];
 
@@ -148,7 +149,7 @@ export default function Feedback() {
                     Lexmark, my
                     <chakra.strong color={useColorModeValue('gray.100', 'gray.50')}>
                         {' '}
-                        mentors
+                        Colleagues
                     </chakra.strong>{' '}
                     also gave their
                     <chakra.strong color={useColorModeValue('gray.100', 'gray.50')}>
