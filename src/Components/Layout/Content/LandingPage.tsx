@@ -55,13 +55,8 @@ export default function CallToActionWithVideo() {
               Norris G. Hipolito Jr.
             </Text>
           </Heading>
-          <Text color={'gray.200'}>
-            Snippy is a rich coding snippets app that lets you create your own
-            code snippets, categorize them, and even sync them in the cloud so
-            you can use them anywhere. All that is free!Snippy is a rich coding
-            snippets app that lets you create your own code snippets, categorize
-            them, and even sync them in the cloud so you can use them anywhere.
-            All that is free!
+          <Text color={'gray.200'} textAlign='justify'>
+            I am currently a 4th year Bachelor of Science student studying Computer Science at Cebu Institute of Technology - University with the goal of becoming a Software Engineer. I have gained a lot of experience throughout my studies in which I was able to work for a company briefly even before I have graduated and also made various website applications for our class projects. Additionally, I am confident that I have gained the knowledge and expertise essential to build my career as a software engineer in the near future thanks to my internship with Lexmark. With my passion and eagerness to learn and improve in this field,  I am certain that I will be a valuable asset and can make a significant contribution to any projects that are given to me.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
